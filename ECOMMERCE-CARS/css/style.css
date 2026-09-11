@@ -1,0 +1,50 @@
+.menu-navegacao ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #2F2F2F; /* 30% cor do projeto */
+}
+
+
+
+/*Navegação com imagem*/
+.menu-navegacao {
+  display: flex;
+  align-items: center; /* Alinha logo e links verticalmente no meio */
+  background-color: #2F2F2F;
+  padding: 0 20px;     /* Espaçamento interno nas laterais da barra */
+}
+
+/* Controla o tamanho da imagem da logo */
+.menu-navegacao .img-logo {
+  height: 80px; 
+  width: auto;
+  display: block;
+}
+
+/* A lista de links */
+.menu-navegacao ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto; /* O segredo: o "auto" calcula o espaço dos dois lados e joga a lista pro MEIO exato da tela */
+  padding: 0;
+}
+
+/* Estilo dos links normais */
+.menu-navegacao a {
+  display: block;
+  color: white;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+.menu-navegacao a:hover {
+  background-color: #111;
+}
+
+
+body {
+  background-color: #212121; /* 60% cor do projeto */
+ margin: 0;
+}
