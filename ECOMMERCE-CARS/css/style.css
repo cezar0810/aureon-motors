@@ -6,6 +6,80 @@
   background-color: #2F2F2F; /* 30% cor do projeto */
 }
 
+body {
+    background-color: #212121; /* 60% cor do projeto */
+    margin: 0;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card { 
+    width: 300px; 
+    border: 1px solid #8e0808; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: #665f5f; /* Fundo branco para destacar o produto */
+    display: flex; 
+    flex-direction: column; /* Joga a imagem em cima e o conteúdo embaixo */
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgb(254, 252, 252); 
+    color: #333; 
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;     
+    object-fit: cover; /* Faz a foto preencher o topo perfeitamente */
+    display: block;    
+}
+
+.card-conteudo { 
+    padding: 16px; 
+}
+
+.card-conteudo h1 {
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    color: #fff; /* Garante que o texto fique escuro visível */
+}
+
+.card-conteudo p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #8e0808; /* Destaca o preço */
+    margin: 0;
+}
+
+
+
+.banner {
+    height: 500px;
+    background-image: url("../assets/images/carros/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner button{
+
+  background-color: #8e0808;
+}
+
+.banner-conteudo {
+  aling-items: flex-start;
+}
 
 
 /*Navegação com imagem*/
@@ -46,5 +120,13 @@
 
 body {
   background-color: #212121; /* 60% cor do projeto */
- margin: 0;
+  margin: 0;
+}
+
+.bloco-destacado {
+  height: 260px;
+  background-image: url("../assets/images/bakcground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
