@@ -9,6 +9,7 @@ main {
         width: 100%;
         border-collapse: collapse;
         text-align: center;
+        margin-bottom: 30px;
     }
 
      main table td, main table th {
