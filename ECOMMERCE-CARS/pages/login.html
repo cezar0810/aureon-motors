@@ -1,0 +1,105 @@
+<!--
+Descricao: Criar loja virtual - Página de Login com Validação JS (Situação de aprendizagem 01)
+nome_arquivo: login.html
+nome_exercicio: Situação de aprendizagem 01
+nome_aluno: Cezar Augusto Silva Albuquerque
+turma: TDE-1BAA-26
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Aureon Motors</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação Reutilizado -->
+    <nav class="menu-navegacao">
+        <a href="index.html" class="logo-link">
+            <img src="../assets/logos/LOGO 1.png" alt="Logo" class="img-logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produto.html">Loja</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container centralizador baseado na estrutura do projeto -->
+    <div class="container-cards" style="min-height: calc(100vh - 80px); box-sizing: border-box;">
+        
+        <!-- Bloco de login aplicando a identidade visual e bordas do .card -->
+        <div class="card" style="padding: 24px; box-sizing: border-box; width: 100%; max-width: 360px;">
+            
+            <!-- Conteúdo de texto baseado nas cores do .card-conteudo -->
+            <div class="card-conteudo" style="padding: 0; margin-bottom: 20px;">
+                <h1 style="margin-bottom: 10px;">Acesse sua Conta</h1>
+                <p style="color: #fff; font-weight: normal; font-size: 0.9rem;">Entre para gerenciar seus veículos e favoritos.</p>
+            </div>
+
+            <!-- Formulário de Login com chamada de validação JS no evento onsubmit -->
+            <form name="loginForm" action="#" onsubmit="return validarFormulario()" method="POST" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+                
+                <!-- Campo de Entrada: Email -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="email" style="color: #fff; font-size: 0.9rem; font-weight: bold;">E-mail</label>
+                    <input type="email" id="email" name="email" style="padding: 10px; border-radius: 4px; border: 1px solid #212121; background-color: #212121; color: white; outline: none;">
+                </div>
+
+                <!-- Campo de Entrada: Senha Oculta (type="password") -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="senha" style="color: #fff; font-size: 0.9rem; font-weight: bold;">Senha</label>
+                    <input type="password" id="senha" name="senha" style="padding: 10px; border-radius: 4px; border: 1px solid #212121; background-color: #212121; color: white; outline: none;">
+                </div>
+
+                <!-- Links utilitários solicitados (Esqueci a senha / Cadastrar-se) -->
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 5px;">
+                    <a href="#" style="color: #8e0808; text-decoration: none; font-weight: bold;">Esqueci minha senha</a>
+                    <a href="#" style="color: #fff; text-decoration: none;">Criar uma conta</a>
+                </div>
+
+                <!-- Botão de submissão no padrão de estilo do banner (#8e0808) -->
+                <button type="submit" style="margin-top: 15px; display: inline-block; background-color: #8e0808; color: white; padding: 12px 24px; border: none; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1rem; cursor: pointer; text-align: center;">
+                    Entrar
+                </button>
+                
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Script de Validação Javascript (Padrão W3Schools) -->
+    <script>
+        function validarFormulario() {
+            // Obtém os valores dos campos usando o name do formulário e dos inputs
+            var email = document.forms["loginForm"]["email"].value;
+            var senha = document.forms["loginForm"]["senha"].value;
+
+            // Validação do campo de E-mail
+            if (email == "") {
+                alert("O campo E-mail deve ser preenchido.");
+                return false;
+            }
+
+            // Validação do campo de Senha
+            if (senha == "") {
+                alert("O campo Senha deve ser preenchido.");
+                return false;
+            }
+
+            // Validação complementar: tamanho mínimo da senha
+            if (senha.length < 6) {
+                alert("A senha deve conter no mínimo 6 caracteres.");
+                return false;
+            }
+
+            // Se passar por todas as validações, o formulário é enviado
+            alert("Validação concluída com sucesso! Enviando dados...");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
