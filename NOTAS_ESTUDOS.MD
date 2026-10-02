@@ -177,3 +177,54 @@ As decisões de design refletidas nas ecrãs apresentadas alinham-se rigorosamen
 * **Consistência Visual:** Existe uma padronização rigorosa na aplicação tipográfica, formato de botões e barra superior (header) através de todos os ecrãs (Desktop 1 ao 4)[cite: 1]. Esta consistência garante previsibilidade, reduzindo a curva de aprendizagem do utilizador ao operar o sistema.
 * **Arquitetura Baseada em Componentes:** O design sugere uma forte componentização (típica de frameworks como React, Vue ou Angular). Elementos como o "Cartão de Veículo" (imagem, modelo, preço e botão "Ver Detalhes" no Desktop - 3) e as "Linhas da Tabela" (Desktop - 4) constituem blocos padronizados[cite: 1]. Isto favorece o Princípio DRY (*Don't Repeat Yourself*) no código, permitindo que um único componente programado seja reutilizado em toda a aplicação, facilitando manutenções futuras.
 * **Navegação e Feedback:** A abertura do perfil do utilizador num painel lateral (Drawer) no Desktop - 3 é um padrão de arquitetura *Single Page Application (SPA)*[cite: 1]. Permite que o operador visualize os dados da conta sem perder o contexto do catálogo onde estava a operar ao fundo, melhorando o fluxo de trabalho.
+
+
+# Projeto Nova-Web - Especificações de UI/UX (Tela de Login - AUREON MOTORS)
+
+## 1. Conceitos de Usabilidade em Formulários
+
+* **Labels vs. Placeholders (Aplicações no Projeto AUREON MOTORS):**
+  * **Problema Identificado no Layout Actual:** Na interface atual (`Desktop - 2`), os textos `"EMAIL"` e `"SENHA"` atuam como rótulos internos/placeholders dentro dos campos[cite: 1]. Quando o utilizador começa a digitar, o texto desaparece, o que pode causar perda de contexto visual e falhas de acessibilidade em leitores de ecrã.
+  * **Diretriz de Ajuste:** Para garantir acessibilidade e conformidade UX, as *labels* serão mantidas visíveis de forma permanente acima de cada campo de input em caixa alta (ex: `E-MAIL` e `SENHA`). O espaço interno do *placeholder* será reservado apenas para exemplos de formato (ex: `seu.email@exemplo.com`).
+
+* **Hierarquia Visual (Cores e Elementos do AUREON MOTORS):**
+  * **Botão Primário (`Primary Button - ENTRAR`):** Destaque absoluto através da cor de acento da marca (Vermelho Vivo) com cantos arredondados e texto em caixa alta e negrito (`ENTRAR`)[cite: 1]. O peso visual é mantido elevado para atrair o olhar imediatamente no container central[cite: 1].
+  * **Ações Secundárias (`Secondary Actions`):** Links em texto plano cinzento sem fundo (`"ESQUECI MINHA SENHA"` e `"NÃO POSSUO UMA CONTA"`)[cite: 1]. Apresentam menor contraste em relação ao card escuro para evitar competição visual com o botão principal de acesso[cite: 1].
+
+## 2. Estados de Validação dos Campos de Entrada (Input States)
+
+Com base no tema escuro (*Dark Mode*) da interface AUREON MOTORS, definiram-se as seguintes especificações visuais para os inputs[cite: 1]:
+
+* **Default (Padrão):**
+  * Fundo escuro com tom de contraste médio (`#2B2B2B` / `#222222`)[cite: 1].
+  * Borda fina neutra (tom cinzento-escuro `#444444`)[cite: 1].
+  * Texto e label em cinzento-claro/branco para boa legibilidade sobre o fundo escuro[cite: 1].
+
+* **Focus (Foco):**
+  * A alteração da borda passa de neutra para a cor primária da marca (Vermelho AUREON) ou branco de alto contraste.
+  * Adição de um anel de foco (*outline*) de 2px para navegação por teclado.
+
+* **Error (Erro):**
+  * Borda do input em vermelho vivo de alerta.
+  * Mensagem explicativa posicionado logo abaixo do campo afetado (ex: *"Formato de e-mail inválido"* ou *"Senha incorreta"*).
+
+* **Success (Sucesso):**
+  * Borda alterada para tom verde-sucesso.
+  * Ícone de verificação (*checkmark*) exibido no canto direito interno do campo de e-mail.
+
+* **Disabled (Desabilitado):**
+  * Opacidade reduzida para 40% em tom cinzento opaco.
+  * Remoção do cursor tátil (`not-allowed`) e desativação da parada de foco por tecla Tab.
+
+## 3. Padrões de Acessibilidade no Dark Mode
+
+* **Contraste Mínimo de Cor (WCAG 2.1 AA):**
+  * **Texto em Fundo Escuro:** Assegurado o contraste mínimo de **4.5:1** para todos os textos principais (brancos e cinzentos-claros) sobre o fundo antracite/preto do container (`Desktop - 2`)[cite: 1].
+  * **Botão de Ação Vermelho:** O botão vermelho `"ENTRAR"` utiliza texto em branco de alto contraste sobre fundo vermelho saturado, cumprindo a razão de contraste tátil e visual[cite: 1].
+
+* **Navegação via Tecla Tab e Leitores de Tela:**
+  * **Sequência de Foco (Tab Order):**
+    `Logótipo AUREON MOTORS` → `Campo EMAIL` → `Campo SENHA` → `Link "ESQUECI MINHA SENHA"` → `Botão "ENTRAR"` → `Link "NÃO POSSUO UMA CONTA"`[cite: 1].
+  * **Acessibilidade de Software:**
+    * Utilização das tags `<label for="...">` devidamente associadas aos IDs dos inputs de e-mail e senha.
+    * Atributos `aria-invalid="true"` acionados dinamicamente no surgimento de erros de autenticação.
