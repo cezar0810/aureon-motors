@@ -228,3 +228,24 @@ Com base no tema escuro (*Dark Mode*) da interface AUREON MOTORS, definiram-se a
   * **Acessibilidade de Software:**
     * Utilização das tags `<label for="...">` devidamente associadas aos IDs dos inputs de e-mail e senha.
     * Atributos `aria-invalid="true"` acionados dinamicamente no surgimento de erros de autenticação.
+
+    # Projeto Nova-Web - UI/UX Design
+
+## Aula 09: UX de Tabelas de Dados e Telas de Perfil
+
+### 1. Pesquisa Teórica - UX para Tabelas Corporativas
+
+*   **Alinhamento de Dados:**
+    *   Textos devem ser alinhados à *esquerda*.
+    *   Números e valores monetários devem ser alinhados à *direita*.
+    *   Status e ações rápidas podem ser centralizados.
+*   **Filtros e Busca:**
+    *   O campo de pesquisa principal deve ficar posicionado no topo superior esquerdo ou direito acima da tabela para rápido acesso visual.
+    *   Filtros avançados devem ser agrupados ou dispostos em menus suspensos para economizar espaço de tela.
+*   **Hierarquia Visual:**
+    *   Utilização de cabeçalhos fixos (*sticky header*) para tabelas extensas.
+    *   Alternância de cores em linhas (*zebra striping*) ou bordas sutis para facilitar a leitura horizontal.
+
+### 2. Especificação do Protótipo (Figma)
+
+https://www.figma.com/design/7wVY49f745s176DvdVYz6A/Untitled?node-id=0-1&p=f&t=M3Ps0QRS70OAkrqB-0
