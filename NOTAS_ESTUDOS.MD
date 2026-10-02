@@ -153,3 +153,27 @@ Esta atividade mostrou que HTML, Markdown e XML possuem finalidades diferentes.
 O HTML é utilizado para estruturar páginas da web, o Markdown facilita a criação de documentações e o XML representa dados por meio de uma estrutura personalizada.
 
 A auditoria também demonstrou que o funcionamento de um site depende de diferentes elementos de infraestrutura, como o registro do domínio, a resolução DNS, os endereços IP e os servidores responsáveis pelo direcionamento do domínio.
+
+# Documento de Análise de Interface e Usabilidade - Projeto AUREON MOTORS
+
+## 1. Mapeamento de Plataformas
+A interface apresentada no ficheiro de imagem foi projetada com foco em ecrãs amplos (desktop), mas exige adaptações específicas caso seja transposta para outros dispositivos:
+
+* **Navegadores Desktop (Interface Atual):** A interface tira proveito da largura do ecrã para exibir imagens em alta resolução no banner principal (Desktop - 1) e grelhas de produtos distribuídas lado a lado (Desktop - 3)[cite: 1]. O menu de navegação é extenso e visível continuamente na parte superior[cite: 1].
+* **Tablets Operacionais:** O layout necessitará de adaptações para ecrãs de dimensão média (breakpoint intermediário). O menu lateral de perfil do utilizador (Desktop - 3) pode sobrepor excessivamente o ecrã principal[cite: 1], exigindo que o fundo seja escurecido (overlay) ou que o menu desloque o conteúdo (push). A tabela de inventário (Desktop - 4) poderá exigir navegação por deslocamento horizontal caso o tablet seja utilizado na orientação vertical (retrato)[cite: 1].
+* **Dispositivos Móveis / Coletores (Mobile):** As especificidades alteram-se significativamente. O menu superior precisará de ser convertido num menu hambúrguer (off-canvas). Os cartões de veículos (Desktop - 3) devem passar de uma exibição em grelha para uma exibição em coluna única[cite: 1]. A tabela estruturada no Desktop - 4 é inviável em ecrãs pequenos e deverá ser convertida numa lista de "cartões" de dados (onde cada linha da tabela passa a ser um bloco individual de informações)[cite: 1].
+
+## 2. Capacidade da Plataforma Computacional
+As escolhas visuais do projeto impactam diretamente a operação e o desempenho dependendo do dispositivo de acesso:
+
+* **Densidade de Informação:** A tabela do Desktop - 4 possui uma densidade de informação equilibrada para utilização com rato (ponteiro de precisão)[cite: 1]. Se for migrada para dispositivos móveis, essa mesma densidade geraria ruído visual e dificultaria a leitura. Reduzir a informação no ecrã ou aplicar uma paginação mais assertiva será necessário em dispositivos de ecrã menor.
+* **Tamanho dos Botões e Áreas de Clique/Toque:** Os botões de ação principal (CTAs) em vermelho ("VER CARROS" e "ENTRAR") possuem dimensões generosas, o que favorece a acessibilidade tátil e cumpre a Lei de Fitts[cite: 1]. Contudo, elementos de menor dimensão, como os campos de seleção de filtro ("Marca", "Categoria") no Desktop - 3, necessitarão de ter as suas áreas de toque ampliadas para pelo menos 44x44 píxeis em dispositivos móveis, evitando toques acidentais[cite: 1].
+* **Processamento Gráfico e Rede:** O uso de múltiplas fotografias de veículos e banners de alta fidelidade (Desktop - 1 e Desktop - 4) exige maior capacidade de processamento gráfico e largura de banda[cite: 1]. Em coletores ou dispositivos com ligações de rede instáveis, seria necessário aplicar técnicas de *Lazy Loading* (carregamento diferido) para otimizar o tempo de resposta.
+
+## 3. Princípios do Projeto de Software
+As decisões de design refletidas nas ecrãs apresentadas alinham-se rigorosamente com padrões de arquitetura e usabilidade contemporâneos:
+
+* **Usabilidade e Carga Cognitiva:** O sistema adota o princípio do minimalismo e da clareza. O ecrã de início de sessão (Desktop - 2) centraliza a atenção do utilizador unicamente no formulário de autenticação, eliminando distrações em seu redor[cite: 1]. O contraste do fundo escuro (Dark Mode) com os botões e detalhes em vermelho facilita a hierarquia visual, guiando o olhar diretamente para as ações primárias[cite: 1].
+* **Consistência Visual:** Existe uma padronização rigorosa na aplicação tipográfica, formato de botões e barra superior (header) através de todos os ecrãs (Desktop 1 ao 4)[cite: 1]. Esta consistência garante previsibilidade, reduzindo a curva de aprendizagem do utilizador ao operar o sistema.
+* **Arquitetura Baseada em Componentes:** O design sugere uma forte componentização (típica de frameworks como React, Vue ou Angular). Elementos como o "Cartão de Veículo" (imagem, modelo, preço e botão "Ver Detalhes" no Desktop - 3) e as "Linhas da Tabela" (Desktop - 4) constituem blocos padronizados[cite: 1]. Isto favorece o Princípio DRY (*Don't Repeat Yourself*) no código, permitindo que um único componente programado seja reutilizado em toda a aplicação, facilitando manutenções futuras.
+* **Navegação e Feedback:** A abertura do perfil do utilizador num painel lateral (Drawer) no Desktop - 3 é um padrão de arquitetura *Single Page Application (SPA)*[cite: 1]. Permite que o operador visualize os dados da conta sem perder o contexto do catálogo onde estava a operar ao fundo, melhorando o fluxo de trabalho.
