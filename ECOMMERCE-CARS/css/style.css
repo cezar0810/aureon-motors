@@ -6,6 +6,33 @@
   background-color: #2F2F2F; /* 30% cor do projeto */
 }
 
+
+
+/* Container que junta o botão e a foto no canto direito */
+.usuario-nav-container {
+    display: flex !important;  /* O !important garante que nenhuma outra regra cancele o Flexbox */
+    flex-direction: row;       /* Força explicitamente a ficar na horizontal */
+    align-items: center;       /* Alinha verticalmente no meio */
+    gap: 15px;                 /* Espaço entre o texto Login e a foto de perfil */
+}
+
+/* Garante que o link do perfil não quebre linha */
+.perfil-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Mantém a foto pequena e proporcional */
+.img-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
 body {
     background-color: #212121; /* 60% cor do projeto */
     margin: 0;
