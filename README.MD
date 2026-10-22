@@ -3,26 +3,31 @@
 *Por: Cezar Albuquerque*
 
 
-# CHECKLIST
-SA 01 — Site institucional
-[C] Escolher Blog ou Loja Virtual
-[C] Planejar as três páginas e a navegação
-[C] Mapear os componentes e organizar as pastas
-[C] Definir equipe, responsabilidades e infraestrutura
-[C] Criar cronograma Gantt/Kanban
-[C] Documentar o planejamento no README.md
-[C] Publicar o projeto no GitHub
 
-SA 02 — Sistema corporativo
-[C] Planejar Login, Perfil e Consulta
-[C] Criar protótipos de alta fidelidade no Figma
-[C] Desenhar as três telas para desktop e mobile
-[C] Criar protótipo interativo e validar os fluxos
-[ ] Definir recursos humanos e materiais
-[ ] Criar cronograma com responsáveis e marcos
-[C] Otimizar imagens e organizar a pasta images/
-[C] Documentar o plano e os links do Figma
-[C] Publicar tudo no GitHub
+📋 Planejamento de Situações de Aprendizagem (SA)
+
+
+🌐 SA 01 — Site Institucional
+
+• [X] Escolher Blog ou Loja Virtual
+• [X] Planejar as três páginas e a navegação
+• [X] Mapear os componentes e organizar as pastas
+• [X] Definir equipe, responsabilidades e infraestrutura
+• [X] Criar cronograma Gantt/Kanban
+• [X] Documentar o planejamento no README.md
+• [X] Publicar o projeto no GitHub
+
+🏢 SA 02 — Sistema Corporativo
+
+• [X] Planejar Login, Perfil e Consulta
+• [X] Criar protótipos de alta fidelidade no Figma
+• [X] Desenhar as três telas para desktop e mobile
+• [X] Criar protótipo interativo e validar os fluxos
+• [ ] Definir recursos humanos e materiais ⚠️ Pendente
+• [ ] Criar cronograma com responsáveis e marcos ⚠️ Pendente
+• [X] Otimizar imagens e organizar a pasta images/
+• [X] Documentar o plano e os links do Figma
+• [X] Publicar tudo no GitHub
 
 
 # **1\. OBJETIVOS**
