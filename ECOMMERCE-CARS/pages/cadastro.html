@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15 - JavaScript aplicado a Formulários</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <style>
+        /* Estilo rápido para a mensagem de alerta no topo */
+        .alerta-sucesso {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        
+        <!-- Alerta no topo solicitado no desafio -->
+        <div id="alertaSucesso" class="alerta-sucesso"></div>
+
+        <form id="formCadastro" onsubmit="cadastrar(event)">
+            <!-- Input 1 -->
+            <div class="input-group">
+                <label for="nome">Nome:</label>
+                <div class="field-row">
+                    <input type="text" id="nome" placeholder="Digite seu nome" required disabled>
+                    <button type="button" class="btn-habilitar" data-target="nome">Habilitar</button>
+                </div>
+            </div>
+
+            <!-- Input 2 -->
+            <div class="input-group">
+                <label for="email">E-mail:</label>
+                <div class="field-row">
+                    <input type="email" id="email" placeholder="exemplo@email.com" required disabled>
+                    <button type="button" class="btn-habilitar" data-target="email">Habilitar</button>
+                </div>
+            </div>
+
+            <!-- Input 3 -->
+            <div class="input-group">
+                <label for="senha">Senha:</label>
+                <div class="field-row">
+                    <input type="password" id="senha" placeholder="Mínimo de caracteres" required disabled>
+                    <button type="button" class="btn-habilitar" data-target="senha">Habilitar</button>
+                </div>
+            </div>
+
+            <!-- Input 4 -->
+            <div class="input-group">
+                <label for="telefone">Telefone:</label>
+                <div class="field-row">
+                    <input type="text" id="telefone" placeholder="(00) 00000-0000" required disabled>
+                    <button type="button" class="btn-habilitar" data-target="telefone">Habilitar</button>
+                </div>
+            </div>
+
+            <!-- Botão de Enviar corrigido para type="submit" -->
+            <button type="submit" class="btn-enviar" style="width: 100%; margin-top: 15px;">ENVIAR</button>
+        </form>
+    </div>
+
+    <script>
+        const botoesHabilitar = document.querySelectorAll('.btn-habilitar');
+
+        botoesHabilitar.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const targetId = botao.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+
+                input.removeAttribute('disabled');
+                input.focus();
+            });
+        });
+
+        const inputs = document.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                input.setAttribute('disabled', 'true');
+            });
+        });
+
+        // Função de cadastro exigida no desafio
+        function cadastrar(event) {
+            event.preventDefault(); // Evita o recarregamento padrão da página
+
+            // Captura o valor de um dos dados (ex: Nome)
+            const nomeUsuario = document.getElementById('nome').value;
+
+            // Seleciona a div de alerta no topo
+            const alerta = document.getElementById('alertaSucesso');
+
+            // Exibe a mensagem de sucesso com o dado do formulário
+            alerta.innerText = `Cadastrado com sucesso! Bem-vindo(a), ${nomeUsuario}.`;
+            alerta.style.display = 'block';
+
+            // Opcional: Limpa o formulário após o envio
+            document.getElementById('formCadastro').reset();
+        }
+    </script>
+</body>
+</html>
