@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aureon Motors - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para ícones (FontAwesome) para replicar os ícones dos cards -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="menu-navegacao"> 
+    <a href="index.html" class="logo-link"> 
+        <img src="../assets/logos/LOGO 1.png" alt="Logo" class="img-logo"> 
+    </a> 
+    
+    <ul> 
+        <li><a href="../pages/index.html">Início</a></li> 
+        <li><a href="../pages/produto.html">Loja</a></li> 
+        <li><a href="../pages/contato.html">Contato</a></li> 
+    </ul> 
+
+    <!-- Container do canto direito: agrupa o Login e o Perfil -->
+    <div class="usuario-nav-container">
+        <a href="../pages/login.html" class="btn-login-nav">Login</a>
+        
+        <a href="../pages/perfil.html" class="perfil-link">
+            <img src="../assets/icons/simple-avatar-design-concept-for-profile-icon-person-silhouette-on-isolated-transparent-ambience-png.webp" alt="Perfil" class="img-perfil">
+        </a>
+    </div>
+</nav>
+
+    <!-- Dashboard Container -->
+    <main class="dashboard-container">
+        
+        <!-- Cards de Estatísticas -->
+        <section class="stats-grid">
+            
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">VENDAS DO MÊS</span>
+                    <div class="card-main-info">
+                        <span class="card-value">12</span>
+                        <span class="card-badge positive">↑ +20% <small>em relação ao mês anterior</small></span>
+                    </div>
+                    <span class="card-subtitle">veículos vendidos</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">RECEITA DO MÊS</span>
+                    <div class="card-main-info">
+                        <span class="card-value">R$ 482.300</span>
+                        <span class="card-badge positive">↑ +15% <small>em relação ao mês anterior</small></span>
+                    </div>
+                    <span class="card-subtitle">receita total</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">VEÍCULOS EM DESTAQUE</span>
+                    <div class="card-main-info">
+                        <span class="card-value">3</span>
+                    </div>
+                    <span class="card-subtitle">mais procurados</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Tabela de Veículos -->
+        <section class="table-container">
+            <table class="vehicles-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>MARCA</th>
+                        <th>CATEGORIA</th>
+                        <th>PREÇO</th>
+                        <th>IMAGEM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tr>
+                    <tr>
+                        <td>659653295</td>
+                        <td class="bold-text">AUDI R8</td>
+                        <td>COUPE</td>
+                        <td>300.000</td>
+                        <td><div class="car-img-placeholder" style="background-image: url('../assets/images/carros/r8.png');"></div></td>
+                    </tr>
+                    <tr>
+                        <td>62654584</td>
+                        <td class="bold-text">MAZDA RX-8</td>
+                        <td>automóvel esportivo compacto</td>
+                        <td>300.000</td>
+                        <td><div class="car-img-placeholder" style="background-image: url('../assets/images/carros/mazda.jpg');"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>
