@@ -10,34 +10,28 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-    <nav class="menu-navegacao"> 
-    <a href="index.html" class="logo-link"> 
-        <img src="../assets/logos/LOGO 1.png" alt="Logo" class="img-logo"> 
-    </a> 
-    
-    <ul> 
-        <li><a href="../pages/index.html">Início</a></li> 
-        <li><a href="../pages/produto.html">Loja</a></li> 
-        <li><a href="../pages/contato.html">Contato</a></li> 
-    </ul> 
-
-    <!-- Container do canto direito: agrupa o Login e o Perfil -->
-    <div class="usuario-nav-container">
-        <a href="../pages/login.html" class="btn-login-nav">Login</a>
-        
-        <a href="../pages/perfil.html" class="perfil-link">
-            <img src="../assets/icons/simple-avatar-design-concept-for-profile-icon-person-silhouette-on-isolated-transparent-ambience-png.webp" alt="Perfil" class="img-perfil">
+    <nav class="menu-navegacao">
+        <a href="index.html" class="logo-link">
+            <img src="../assets/logos/LOGO 1.png" alt="Logo" class="img-logo">
         </a>
-    </div>
-</nav>
+        <ul>
+            <li><a href="../pages/index.html">Início</a></li>
+            <li><a href="../pages/produto.html">Loja</a></li>
+            <li><a href="../pages/contato.html">Contato</a></li>
+        </ul>
+        <!-- Container do canto direito: agrupa o Login e o Perfil -->
+        <div class="usuario-nav-container">
+            <a href="../pages/login.html" class="btn-login-nav">Login</a>
+            <a href="../pages/perfil.html" class="perfil-link">
+                <img src="../assets/icons/simple-avatar-design-concept-for-profile-icon-person-silhouette-on-isolated-transparent-ambience-png.webp" alt="Perfil" class="img-perfil">
+            </a>
+        </div>
+    </nav>
 
     <!-- Dashboard Container -->
     <main class="dashboard-container">
-        
         <!-- Cards de Estatísticas -->
         <section class="stats-grid">
-            
             <div class="card">
                 <div class="card-icon">
                     <i class="fa-solid fa-car"></i>
@@ -78,11 +72,11 @@
                     <span class="card-subtitle">mais procurados</span>
                 </div>
             </div>
-
         </section>
 
         <!-- Tabela de Veículos -->
         <section class="table-container">
+            <h2>Estoque de Veículos</h2>
             <table class="vehicles-table">
                 <thead>
                     <tr>
@@ -94,7 +88,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    </tr>
                     <tr>
                         <td>659653295</td>
                         <td class="bold-text">AUDI R8</td>
@@ -113,7 +106,47 @@
             </table>
         </section>
 
+        <!-- Tabela de Usuários -->
+        <section class="table-container" style="margin-top: 40px;">
+            <h2>Controle de Usuários</h2>
+            <table class="vehicles-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME / USUÁRIO</th>
+                        <th>E-MAIL</th>
+                        <th>STATUS</th>
+                        <th>AÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Usuário Ativo 1 -->
+                    <tr>
+                        <td>1021</td>
+                        <td class="bold-text">Carlos Silva</td>
+                        <td>carlos.silva@email.com</td>
+                        <td><span class="card-badge positive" style="padding: 4px 8px; border-radius: 4px;">Ativo</span></td>
+                        <td><button style="cursor: pointer; padding: 4px 8px;">Gerenciar</button></td>
+                    </tr>
+                    <!-- Usuário Ativo 2 -->
+                    <tr>
+                        <td>1022</td>
+                        <td class="bold-text">Mariana Costa</td>
+                        <td>mari.costa@email.com</td>
+                        <td><span class="card-badge positive" style="padding: 4px 8px; border-radius: 4px;">Ativo</span></td>
+                        <td><button style="cursor: pointer; padding: 4px 8px;">Gerenciar</button></td>
+                    </tr>
+                    <!-- Conta Fake Detectada -->
+                    <tr>
+                        <td>9981</td>
+                        <td class="bold-text">test_user_999</td>
+                        <td>bot38492@tempmail.com</td>
+                        <td><span class="card-badge negative" style="padding: 4px 8px; border-radius: 4px;">Fake Suspeito</span></td>
+                        <td><button style="cursor: pointer; padding: 4px 8px; background-color: #ff4d4d; color: white; border: none; border-radius: 4px;">Bloquear</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
-
 </body>
 </html>
