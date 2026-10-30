@@ -6,6 +6,10 @@
 
 📋 Planejamento de Situações de Aprendizagem (SA)
 
+### 2. Especificação do Protótipo (Figma)
+
+https://www.figma.com/design/7wVY49f745s176DvdVYz6A/Untitled?node-id=0-1&p=f&t=M3Ps0QRS70OAkrqB-0
+
 
 🌐 SA 01 — Site Institucional
 

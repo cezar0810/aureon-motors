@@ -1,3 +1,7 @@
+### 2. Especificação do Protótipo (Figma)
+
+https://www.figma.com/design/7wVY49f745s176DvdVYz6A/Untitled?node-id=0-1&p=f&t=M3Ps0QRS70OAkrqB-0
+
 \\O que é um Projeto de Software?\\
 
 Um projeto de software é um conjunto de atividades planejadas para criar, desenvolver, testar e entregar um sistema ou aplicação que atenda a uma necessidade específica. Ele envolve etapas como levantamento de requisitos, definição do escopo, desenvolvimento, testes, documentação e implantação. Diferente de um código ou script isolado, um projeto de software possui um objetivo definido, organização e acompanhamento de todo o processo de desenvolvimento, desde a ideia inicial até a entrega do produto final.
@@ -245,7 +249,3 @@ Com base no tema escuro (*Dark Mode*) da interface AUREON MOTORS, definiram-se a
 *   **Hierarquia Visual:**
     *   Utilização de cabeçalhos fixos (*sticky header*) para tabelas extensas.
     *   Alternância de cores em linhas (*zebra striping*) ou bordas sutis para facilitar a leitura horizontal.
-
-### 2. Especificação do Protótipo (Figma)
-
-https://www.figma.com/design/7wVY49f745s176DvdVYz6A/Untitled?node-id=0-1&p=f&t=M3Ps0QRS70OAkrqB-0
